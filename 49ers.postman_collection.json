@@ -1,0 +1,620 @@
+{
+	"info": {
+		"_postman_id": "aa3c9322-e735-4e50-b553-b5b2e47a897c",
+		"name": "49ers",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31172586"
+	},
+	"item": [
+		{
+			"name": "Generate  Token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000?endpoint=token",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"query": [
+						{
+							"key": "endpoint",
+							"value": "token"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Game",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJsb2NhbGhvc3QiLCJpYXQiOjE3Mjc3OTI1NjYsImV4cCI6MTcyNzc5NjE2Niwic3ViIjoiNDllcnNfc2VydmljZSJ9.VxfdEEcRTmX0ZzMP99ZHNs0JJ6rHkt_BlJj1c2sa7Do",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "game_date",
+							"value": "2023-11-29",
+							"type": "text"
+						},
+						{
+							"key": "opponent",
+							"value": "Chicago Bears",
+							"type": "text"
+						},
+						{
+							"key": "location",
+							"value": "Soldier Field",
+							"type": "text"
+						},
+						{
+							"key": "team_score",
+							"value": "38",
+							"type": "text"
+						},
+						{
+							"key": "opponent_score",
+							"value": "34",
+							"type": "text"
+						},
+						{
+							"key": "result",
+							"value": "W",
+							"type": "text"
+						},
+						{
+							"key": "season",
+							"value": "2023-2024",
+							"type": "text"
+						},
+						{
+							"key": "opponent_image",
+							"type": "file",
+							"src": "/Users/mac36/Downloads/EngineerAsignment_GameScoreLeaderboard_49ers/logo_tampabaybuccaneers.svg"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000?endpoint=games",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"query": [
+						{
+							"key": "endpoint",
+							"value": "games"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Game",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJsb2NhbGhvc3QiLCJpYXQiOjE3Mjc0NjUyODYsImV4cCI6MTcyNzQ2ODg4Niwic3ViIjoiNDllcnNfc2VydmljZSJ9.C9hbC7RqEqYZh3CqWttIlv5E53czprYj5RXBZShVUu0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "game_date",
+							"value": "2024-01-01",
+							"type": "text"
+						},
+						{
+							"key": "opponent",
+							"value": "LA Rams",
+							"type": "text"
+						},
+						{
+							"key": "location",
+							"value": "Home",
+							"type": "text"
+						},
+						{
+							"key": "team_score",
+							"value": "30",
+							"type": "text"
+						},
+						{
+							"key": "opponent_score",
+							"value": "20",
+							"type": "text"
+						},
+						{
+							"key": "result",
+							"value": "W",
+							"type": "text"
+						},
+						{
+							"key": "season",
+							"value": "2023-2024",
+							"type": "text"
+						},
+						{
+							"key": "opponent_image",
+							"type": "file",
+							"src": "/Users/mac36/Desktop/Screen Shot 2024-09-27 at 10.58.13 AM.png"
+						},
+						{
+							"key": "game_id",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api.php?endpoint=games",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api.php"
+					],
+					"query": [
+						{
+							"key": "endpoint",
+							"value": "games"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Game",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJsb2NhbGhvc3QiLCJpYXQiOjE3Mjc0NjUyODYsImV4cCI6MTcyNzQ2ODg4Niwic3ViIjoiNDllcnNfc2VydmljZSJ9.C9hbC7RqEqYZh3CqWttIlv5E53czprYj5RXBZShVUu0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "game_id",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api.php?endpoint=games",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api.php"
+					],
+					"query": [
+						{
+							"key": "endpoint",
+							"value": "games"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Games",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJsb2NhbGhvc3QiLCJpYXQiOjE3Mjc4MTQ1NDQsImV4cCI6MTcyNzgxODE0NCwic3ViIjoiNDllcnNfc2VydmljZSJ9.0CBwSVlpKSwS_CAxNXkA9Wg_Nv86kNKM89PwBw1g8Ds",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/?endpoint=games",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						""
+					],
+					"query": [
+						{
+							"key": "endpoint",
+							"value": "games"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Player",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJsb2NhbGhvc3QiLCJpYXQiOjE3Mjc3OTUwNTIsImV4cCI6MTcyNzc5ODY1Miwic3ViIjoiNDllcnNfc2VydmljZSJ9.dNUaSTjZ_bbFUR7I5qWyO_dV-sBaodnCGjwUyAZFnxY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "first_name",
+							"value": "Arik",
+							"type": "text"
+						},
+						{
+							"key": "last_name",
+							"value": "Armstead",
+							"type": "text"
+						},
+						{
+							"key": "position",
+							"value": "CB",
+							"type": "text"
+						},
+						{
+							"key": "height",
+							"value": "5.10",
+							"type": "text"
+						},
+						{
+							"key": "weight",
+							"value": "188",
+							"type": "text"
+						},
+						{
+							"key": "age",
+							"value": "30",
+							"type": "text"
+						},
+						{
+							"key": "experience",
+							"value": "8",
+							"type": "text"
+						},
+						{
+							"key": "college",
+							"value": "TCU",
+							"type": "text"
+						},
+						{
+							"key": "game_id",
+							"value": "20",
+							"type": "text"
+						},
+						{
+							"key": "season_rank",
+							"value": "12",
+							"type": "text"
+						},
+						{
+							"key": "game_rank",
+							"value": "13",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/Users/mac36/Downloads/Photo/Photo.png"
+						},
+						{
+							"key": "season",
+							"value": "2023-2024",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/?endpoint=players",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						""
+					],
+					"query": [
+						{
+							"key": "endpoint",
+							"value": "players"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Player",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJsb2NhbGhvc3QiLCJpYXQiOjE3Mjc4MTQ1NDQsImV4cCI6MTcyNzgxODE0NCwic3ViIjoiNDllcnNfc2VydmljZSJ9.0CBwSVlpKSwS_CAxNXkA9Wg_Nv86kNKM89PwBw1g8Ds",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "first_name",
+							"value": "John",
+							"type": "text"
+						},
+						{
+							"key": "last_name",
+							"value": "Doe",
+							"type": "text"
+						},
+						{
+							"key": "position",
+							"value": "QB",
+							"type": "text"
+						},
+						{
+							"key": "height",
+							"value": "6.4",
+							"type": "text"
+						},
+						{
+							"key": "weight",
+							"value": "220",
+							"type": "text"
+						},
+						{
+							"key": "age",
+							"value": "28",
+							"type": "text"
+						},
+						{
+							"key": "experience",
+							"value": "5",
+							"type": "text"
+						},
+						{
+							"key": "college",
+							"value": "Stanford",
+							"type": "text"
+						},
+						{
+							"key": "game_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "season_rank",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "game_rank",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/Users/mac36/Desktop/Screen Shot 2024-09-27 at 11.11.35 AM.png"
+						},
+						{
+							"key": "player_id",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000?endpoint=players",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"query": [
+						{
+							"key": "endpoint",
+							"value": "players"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Player",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJsb2NhbGhvc3QiLCJpYXQiOjE3Mjc0NjUyODYsImV4cCI6MTcyNzQ2ODg4Niwic3ViIjoiNDllcnNfc2VydmljZSJ9.C9hbC7RqEqYZh3CqWttIlv5E53czprYj5RXBZShVUu0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "player_id",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api.php?endpoint=players",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api.php"
+					],
+					"query": [
+						{
+							"key": "endpoint",
+							"value": "players"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Players By Game",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJsb2NhbGhvc3QiLCJpYXQiOjE3Mjc4MTQ1NDQsImV4cCI6MTcyNzgxODE0NCwic3ViIjoiNDllcnNfc2VydmljZSJ9.0CBwSVlpKSwS_CAxNXkA9Wg_Nv86kNKM89PwBw1g8Ds",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000?endpoint=players&game_id=6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"query": [
+						{
+							"key": "endpoint",
+							"value": "players"
+						},
+						{
+							"key": "game_id",
+							"value": "6"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Player Info",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJsb2NhbGhvc3QiLCJpYXQiOjE3Mjc3ODk1MjIsImV4cCI6MTcyNzc5MzEyMiwic3ViIjoiNDllcnNfc2VydmljZSJ9.PB1x_yOwrPNkhTuFpkol5lGRV3lvO5pOfp_qssa-7Xk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000?endpoint=players&game_id=1&player_id=2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"query": [
+						{
+							"key": "endpoint",
+							"value": "players"
+						},
+						{
+							"key": "game_id",
+							"value": "1"
+						},
+						{
+							"key": "player_id",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

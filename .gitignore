@@ -1,0 +1,48 @@
+# Composer dependencies
+/vendor/
+
+# PHPStorm project files
+/.idea/
+
+# Laravel
+/public/storage
+/public/hot
+/storage/*.key
+/storage/debugbar/*
+/storage/logs/*
+/storage/framework/sessions/*
+/storage/framework/views/*
+/storage/framework/cache/*
+/.env
+Homestead.yaml
+Homestead.json
+
+# Symfony
+/.env
+/.env.local
+/.env.*.local
+/var/
+!/.gitkeep
+
+# PHPUnit
+/phpunit.xml
+/phpunit.xml.dist
+
+# Log files
+*.log
+
+# System files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Backup files
+*.bak
+*.swp
+*~
+
+# Other
+*.cache
+*.tmp
+*.log
