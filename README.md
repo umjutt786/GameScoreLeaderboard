@@ -45,6 +45,7 @@ Use Composer to install the necessary PHP packages:
    DB_NAME=your_database_name
    DB_USER=your_database_user
    DB_PASS=your_database_password
-
-php -S localhost:8000 -t public
+3. **Run Locally**
+    ```bash
+    php -S localhost:8000 -t public
 
